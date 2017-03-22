@@ -1,13 +1,13 @@
-Origin S2I NodeJS
-=================
+# Origin S2I NodeJS
+
+[![Build Status](https://travis-ci.org/bucharest-gold/origin-s2i-nodejs.svg?branch=master)](https://travis-ci.org/bucharest-gold/origin-s2i-nodejs)
+[![](https://images.microbadger.com/badges/image/bucharestgold/centos7-s2i-nodejs.svg)](https://microbadger.com/images/bucharestgold/centos7-s2i-nodejs "Get your own image badge on microbadger.com")
 
 This repository contains sources for an [s2i](https://github.com/openshift/source-to-image) builder image, based on CentOS7 and Node.js releases from nodejs.org.
 
 If you are interested in developing against SCL-based Node.js releases, try [sti-nodejs](https://github.com/openshift/sti-nodejs).
 
 [![docker hub stats](http://dockeri.co/image/bucharestgold/centos7-s2i-nodejs)](https://hub.docker.com/r/bucharestgold/centos7-s2i-nodejs/)
-
-[![](https://images.microbadger.com/badges/image/bucharestgold/centos7-s2i-nodejs.svg)](https://microbadger.com/images/bucharestgold/centos7-s2i-nodejs "Get your own image badge on microbadger.com")
 
 For more information about using these images with OpenShift, please see the
 official [OpenShift Documentation](https://docs.openshift.org/latest/using_images/s2i_images/nodejs.html).
