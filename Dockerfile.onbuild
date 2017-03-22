@@ -39,16 +39,16 @@ RUN set -ex && \
     B9AE9905FFD7803F25714661B63B535A4C206CA9 \
     56730D5401028683275BD23C23EFEFE93C4CFFFE \
   ; do \
-    gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; \
+    gpg -q --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; \
   done && \
   INSTALL_PKGS="bzip2 nss_wrapper" && \
-  yum -y install epel-release && \
-  yum install -y --setopt=tsflags=nodocs $INSTALL_PKGS && \
+  yum -q -y install epel-release && \
+  yum -q install -y --setopt=tsflags=nodocs $INSTALL_PKGS && \
   rpm -V $INSTALL_PKGS && \
-  yum clean all -y && \
+  yum -q clean all -y && \
   curl -o node-${NODE_VERSION}-linux-x64.tar.gz -sSL https://nodejs.org/dist/${NODE_VERSION}/node-${NODE_VERSION}-linux-x64.tar.gz && \
   curl -o SHASUMS256.txt.asc -sSL https://nodejs.org/dist/${NODE_VERSION}/SHASUMS256.txt.asc && \
-  gpg --batch -d SHASUMS256.txt.asc | grep " node-${NODE_VERSION}-linux-x64.tar.gz\$" | sha256sum -c - && \
+  gpg -q --batch -d SHASUMS256.txt.asc | grep " node-${NODE_VERSION}-linux-x64.tar.gz\$" | sha256sum -c - && \
   tar -zxf node-${NODE_VERSION}-linux-x64.tar.gz -C /usr/local --strip-components=1 && \
   npm install -g npm@${NPM_VERSION} -s && \
   find /usr/local/lib/node_modules/npm -name test -o -name .bin -type d | xargs rm -rf; \
