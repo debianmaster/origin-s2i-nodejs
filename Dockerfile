@@ -53,9 +53,7 @@ RUN set -ex && \
   npm install -g npm@${NPM_VERSION} -s && \
   find /usr/local/lib/node_modules/npm -name test -o -name .bin -type d | xargs rm -rf; \
   rm -rf ~/node-${NODE_VERSION}-linux-x64.tar.gz ~/SHASUMS256.txt.asc /tmp/node-${NODE_VERSION} ~/.npm ~/.node-gyp ~/.gnupg \
-  /usr/share/man /tmp/* /usr/local/lib/node_modules/npm/man /usr/local/lib/node_modules/npm/doc /usr/local/lib/node_modules/npm/html && \
-  chown -R 1001:0 /opt/app-root && \
-  chmod -R ug+rwx /opt/app-root
+    /usr/share/man /tmp/* /usr/local/lib/node_modules/npm/man /usr/local/lib/node_modules/npm/doc /usr/local/lib/node_modules/npm/html
 
 # Copy the S2I scripts from the specific language image to $STI_SCRIPTS_PATH
 COPY ./s2i/ $STI_SCRIPTS_PATH
@@ -64,6 +62,8 @@ COPY ./s2i/ $STI_SCRIPTS_PATH
 # run and build the applications.
 COPY ./contrib/ /opt/app-root
 
+# Drop the root user and make the content of /opt/app-root owned by user 1001
+RUN chown -R 1001:0 /opt/app-root && chmod -R ug+rwx /opt/app-root
 USER 1001
 
 # Set the default CMD to print the usage of the language image
