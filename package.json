@@ -5,7 +5,7 @@
     "type": "git",
     "url": "https://github.com/bucharest-gold/origin-s2i-nodejs.git"
   },
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "NodeJS images for OpenShift / Kubernetes, based on CentOS",
   "devDependencies": {
     "roi": "~0.14.1",
