@@ -1,0 +1,23 @@
+#!/bin/bash
+
+oc cluster up
+oc login -u system:admin
+
+echo "---> Creating s2i-nodejs build"
+oc new-build --binary --name=s2inodejs -l app=s2inodejs
+
+echo "---> Building s2i-nodejs app"
+npm install
+oc start-build s2inodejs --from-dir=. --follow
+
+echo "---> Starting s2i-nodejs"
+oc new-app s2inodejs -l app=s2inodejs
+sleep 60
+oc expose svc/s2inodejs
+sleep 60
+
+echo "=================================================================="
+curl $(oc get routes | awk '{print $2}' | grep xip.io)
+printf "\n"
+echo "---> App running with bucharestgold/centos7-nodejs:latest image."
+echo "=================================================================="
