@@ -16,5 +16,6 @@ before_script:
 script:
   - make test
   - test/onbuild-test
+  - test/onbuild-openshift
 notifications:
   irc: "chat.freenode.net#brass-monkey"
