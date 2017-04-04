@@ -1,5 +1,13 @@
 #!/bin/bash -e
 
+./node_modules/.bin/standard-version
+
+git status -s | grep '^ M'
+if [ "$?" -eq "0" ] ; then
+  echo "You have modified files. Sorry, you have to take care of that before I publish"
+  exit
+fi
+
 BASE_IMAGES="${NAMESPACE}/${OS}-${ONBUILD_IMAGE_NAME} ${NAMESPACE}/${OS}-${BASE_IMAGE_NAME}"
 
 if [ ! -z $DOCKER_USER ] && [ ! -z $DOCKER_PASS ]; then
@@ -9,7 +17,7 @@ fi
 
 for BASE in $BASE_IMAGES ; do
   echo "publishing: ${BASE}..."
-  # docker push $BASE
+  docker push $BASE
 done
 
 TAGS=$(grep VERSIONS Makefile | cut -d = -f 2 | cut -d ' ' -f 1-4)
