@@ -3,22 +3,22 @@
   "apiVersion": "v1",
   "metadata": {
     "name": "centos7-s2i-nodejs",
-    "creationTimestamp": "2017-03-24T17:16:43.497Z"
+    "creationTimestamp": "2017-04-04T13:35:20.905Z"
   },
   "spec": {
     "tags": [
       {
-        "name": "4.8.1",
+        "name": "4.8.2",
         "annotations": {
           "description": "Build and run Node.js applications",
           "iconClass": "icon-nodejs",
-          "tags": "builder, node, nodejs, nodejs-4.8.1, nodejs-4.8.1",
+          "tags": "builder, node, nodejs, nodejs-4.8.2, nodejs-4.8.2",
           "supports": "nodejs:4, nodejs:4.8, nodejs",
           "sampleRepo": "https://github.com/bucharest-gold/s2i-nodejs.git"
         },
         "from": {
           "kind": "DockerImage",
-          "name": "bucharestgold/centos7-s2i-nodejs:4.8.1"
+          "name": "bucharestgold/centos7-s2i-nodejs:4.8.2"
         }
       },
       {
@@ -26,13 +26,13 @@
         "annotations": {
           "description": "Build and run Node.js applications",
           "iconClass": "icon-nodejs",
-          "tags": "builder, node, nodejs, nodejs-4.8.1, nodejs-4",
+          "tags": "builder, node, nodejs, nodejs-4.8.2, nodejs-4",
           "supports": "nodejs:4, nodejs:4.8, nodejs",
           "sampleRepo": "https://github.com/bucharest-gold/s2i-nodejs.git"
         },
         "from": {
           "kind": "ImageStreamTag",
-          "name": "4.8.1"
+          "name": "4.8.2"
         }
       },
       {
@@ -40,13 +40,13 @@
         "annotations": {
           "description": "Build and run Node.js applications",
           "iconClass": "icon-nodejs",
-          "tags": "builder, node, nodejs, nodejs-4.8.1, nodejs-4.8",
+          "tags": "builder, node, nodejs, nodejs-4.8.2, nodejs-4.8",
           "supports": "nodejs:4, nodejs:4.8, nodejs",
           "sampleRepo": "https://github.com/bucharest-gold/s2i-nodejs.git"
         },
         "from": {
           "kind": "ImageStreamTag",
-          "name": "4.8.1"
+          "name": "4.8.2"
         }
       },
       {
@@ -54,13 +54,13 @@
         "annotations": {
           "description": "Build and run Node.js applications",
           "iconClass": "icon-nodejs",
-          "tags": "builder, node, nodejs, nodejs-4.8.1, nodejs-lts",
+          "tags": "builder, node, nodejs, nodejs-4.8.2, nodejs-lts",
           "supports": "nodejs:4, nodejs:4.8, nodejs",
           "sampleRepo": "https://github.com/bucharest-gold/s2i-nodejs.git"
         },
         "from": {
           "kind": "ImageStreamTag",
-          "name": "4.8.1"
+          "name": "4.8.2"
         }
       },
       {
@@ -68,13 +68,13 @@
         "annotations": {
           "description": "Build and run Node.js applications",
           "iconClass": "icon-nodejs",
-          "tags": "builder, node, nodejs, nodejs-4.8.1, nodejs-Argon",
+          "tags": "builder, node, nodejs, nodejs-4.8.2, nodejs-Argon",
           "supports": "nodejs:4, nodejs:4.8, nodejs",
           "sampleRepo": "https://github.com/bucharest-gold/s2i-nodejs.git"
         },
         "from": {
           "kind": "ImageStreamTag",
-          "name": "4.8.1"
+          "name": "4.8.2"
         }
       },
       {
@@ -120,17 +120,17 @@
         }
       },
       {
-        "name": "6.10.1",
+        "name": "6.10.2",
         "annotations": {
           "description": "Build and run Node.js applications",
           "iconClass": "icon-nodejs",
-          "tags": "builder, node, nodejs, nodejs-6.10.1, nodejs-6.10.1",
+          "tags": "builder, node, nodejs, nodejs-6.10.2, nodejs-6.10.2",
           "supports": "nodejs:6, nodejs:6.10, nodejs",
           "sampleRepo": "https://github.com/bucharest-gold/s2i-nodejs.git"
         },
         "from": {
           "kind": "DockerImage",
-          "name": "bucharestgold/centos7-s2i-nodejs:6.10.1"
+          "name": "bucharestgold/centos7-s2i-nodejs:6.10.2"
         }
       },
       {
@@ -138,13 +138,13 @@
         "annotations": {
           "description": "Build and run Node.js applications",
           "iconClass": "icon-nodejs",
-          "tags": "builder, node, nodejs, nodejs-6.10.1, nodejs-6",
+          "tags": "builder, node, nodejs, nodejs-6.10.2, nodejs-6",
           "supports": "nodejs:6, nodejs:6.10, nodejs",
           "sampleRepo": "https://github.com/bucharest-gold/s2i-nodejs.git"
         },
         "from": {
           "kind": "ImageStreamTag",
-          "name": "6.10.1"
+          "name": "6.10.2"
         }
       },
       {
@@ -152,13 +152,13 @@
         "annotations": {
           "description": "Build and run Node.js applications",
           "iconClass": "icon-nodejs",
-          "tags": "builder, node, nodejs, nodejs-6.10.1, nodejs-6.10",
+          "tags": "builder, node, nodejs, nodejs-6.10.2, nodejs-6.10",
           "supports": "nodejs:6, nodejs:6.10, nodejs",
           "sampleRepo": "https://github.com/bucharest-gold/s2i-nodejs.git"
         },
         "from": {
           "kind": "ImageStreamTag",
-          "name": "6.10.1"
+          "name": "6.10.2"
         }
       },
       {
@@ -166,13 +166,13 @@
         "annotations": {
           "description": "Build and run Node.js applications",
           "iconClass": "icon-nodejs",
-          "tags": "builder, node, nodejs, nodejs-6.10.1, nodejs-lts",
+          "tags": "builder, node, nodejs, nodejs-6.10.2, nodejs-lts",
           "supports": "nodejs:6, nodejs:6.10, nodejs",
           "sampleRepo": "https://github.com/bucharest-gold/s2i-nodejs.git"
         },
         "from": {
           "kind": "ImageStreamTag",
-          "name": "6.10.1"
+          "name": "6.10.2"
         }
       },
       {
@@ -180,27 +180,27 @@
         "annotations": {
           "description": "Build and run Node.js applications",
           "iconClass": "icon-nodejs",
-          "tags": "builder, node, nodejs, nodejs-6.10.1, nodejs-Boron",
+          "tags": "builder, node, nodejs, nodejs-6.10.2, nodejs-Boron",
           "supports": "nodejs:6, nodejs:6.10, nodejs",
           "sampleRepo": "https://github.com/bucharest-gold/s2i-nodejs.git"
         },
         "from": {
           "kind": "ImageStreamTag",
-          "name": "6.10.1"
+          "name": "6.10.2"
         }
       },
       {
-        "name": "7.7.4",
+        "name": "7.8.0",
         "annotations": {
           "description": "Build and run Node.js applications",
           "iconClass": "icon-nodejs",
-          "tags": "builder, node, nodejs, nodejs-7.7.4, nodejs-7.7.4",
-          "supports": "nodejs:7, nodejs:7.7, nodejs",
+          "tags": "builder, node, nodejs, nodejs-7.8.0, nodejs-7.8.0",
+          "supports": "nodejs:7, nodejs:7.8, nodejs",
           "sampleRepo": "https://github.com/bucharest-gold/s2i-nodejs.git"
         },
         "from": {
           "kind": "DockerImage",
-          "name": "bucharestgold/centos7-s2i-nodejs:7.7.4"
+          "name": "bucharestgold/centos7-s2i-nodejs:7.8.0"
         }
       },
       {
@@ -208,27 +208,27 @@
         "annotations": {
           "description": "Build and run Node.js applications",
           "iconClass": "icon-nodejs",
-          "tags": "builder, node, nodejs, nodejs-7.7.4, nodejs-7",
-          "supports": "nodejs:7, nodejs:7.7, nodejs",
+          "tags": "builder, node, nodejs, nodejs-7.8.0, nodejs-7",
+          "supports": "nodejs:7, nodejs:7.8, nodejs",
           "sampleRepo": "https://github.com/bucharest-gold/s2i-nodejs.git"
         },
         "from": {
           "kind": "ImageStreamTag",
-          "name": "7.7.4"
+          "name": "7.8.0"
         }
       },
       {
-        "name": "7.7",
+        "name": "7.8",
         "annotations": {
           "description": "Build and run Node.js applications",
           "iconClass": "icon-nodejs",
-          "tags": "builder, node, nodejs, nodejs-7.7.4, nodejs-7.7",
-          "supports": "nodejs:7, nodejs:7.7, nodejs",
+          "tags": "builder, node, nodejs, nodejs-7.8.0, nodejs-7.8",
+          "supports": "nodejs:7, nodejs:7.8, nodejs",
           "sampleRepo": "https://github.com/bucharest-gold/s2i-nodejs.git"
         },
         "from": {
           "kind": "ImageStreamTag",
-          "name": "7.7.4"
+          "name": "7.8.0"
         }
       },
       {
@@ -236,13 +236,13 @@
         "annotations": {
           "description": "Build and run Node.js applications",
           "iconClass": "icon-nodejs",
-          "tags": "builder, node, nodejs, nodejs-7.7.4, nodejs-current",
-          "supports": "nodejs:7, nodejs:7.7, nodejs",
+          "tags": "builder, node, nodejs, nodejs-7.8.0, nodejs-current",
+          "supports": "nodejs:7, nodejs:7.8, nodejs",
           "sampleRepo": "https://github.com/bucharest-gold/s2i-nodejs.git"
         },
         "from": {
           "kind": "ImageStreamTag",
-          "name": "7.7.4"
+          "name": "7.8.0"
         }
       },
       {
@@ -250,13 +250,13 @@
         "annotations": {
           "description": "Build and run Node.js applications",
           "iconClass": "icon-nodejs",
-          "tags": "builder, node, nodejs, nodejs-7.7.4, nodejs-latest",
-          "supports": "nodejs:7, nodejs:7.7, nodejs",
+          "tags": "builder, node, nodejs, nodejs-7.8.0, nodejs-latest",
+          "supports": "nodejs:7, nodejs:7.8, nodejs",
           "sampleRepo": "https://github.com/bucharest-gold/s2i-nodejs.git"
         },
         "from": {
           "kind": "ImageStreamTag",
-          "name": "7.7.4"
+          "name": "7.8.0"
         }
       }
     ]
