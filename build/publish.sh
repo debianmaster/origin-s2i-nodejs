@@ -9,5 +9,10 @@ fi
 
 for BASE in $BASE_IMAGES ; do
   echo "publishing: ${BASE}..."
-  docker push $BASE
+  # docker push $BASE
+done
+
+TAGS=$(grep VERSIONS Makefile | cut -d = -f 2 | cut -d ' ' -f 1-4)
+for VERSION in $(echo $TAGS | tr ' ' "\n") ; do
+  git tag "node-${VERSION}"
 done
