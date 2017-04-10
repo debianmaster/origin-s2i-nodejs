@@ -14,7 +14,7 @@ ENV NPM_RUN=start \
     NODE_ENV=production \
     STI_SCRIPTS_PATH=/usr/libexec/s2i \
     DEV_MODE=false
-    
+
 LABEL io.k8s.description="Platform for building and running Node.js applications" \
       io.k8s.display-name="Node.js $NODE_VERSION" \
       io.openshift.s2i.scripts-url=image:///usr/libexec/s2i \
@@ -34,10 +34,12 @@ RUN set -ex && \
     56730D5401028683275BD23C23EFEFE93C4CFFFE \
   ; do \
     gpg -q --keyserver ha.pool.sks-keyservers.net --recv-keys "$key"; \
+    echo "$key:6" | gpg --import-ownertrust; \
   done && \
-  curl -o node-${NODE_VERSION}-linux-x64.tar.gz -sSL https://nodejs.org/dist/${NODE_VERSION}/node-${NODE_VERSION}-linux-x64.tar.gz && \
-  curl -o SHASUMS256.txt.asc -sSL https://nodejs.org/dist/${NODE_VERSION}/SHASUMS256.txt.asc && \
-  gpg -q --batch -d SHASUMS256.txt.asc | grep " node-${NODE_VERSION}-linux-x64.tar.gz\$" | sha256sum -c - && \
+  curl -O -sSL https://nodejs.org/dist/${NODE_VERSION}/node-${NODE_VERSION}-linux-x64.tar.gz && \
+  curl -O -sSL https://nodejs.org/dist/${NODE_VERSION}/SHASUMS256.txt.asc && \
+  gpg --verify SHASUMS256.txt.asc && \
+  grep " node-${NODE_VERSION}-linux-x64.tar.gz\$" SHASUMS256.txt.asc | sha256sum -c - && \
   tar -zxf node-${NODE_VERSION}-linux-x64.tar.gz -C /usr/local --strip-components=1 && \
   HOME=/opt/app-root/src && \
   mkdir -p ${HOME} && \
