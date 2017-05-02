@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.3.1"></a>
+## [0.3.1](https://github.com/bucharest-gold/origin-s2i-nodejs/compare/v0.3.0...v0.3.1) (2017-05-02)
+
+
+### Bug Fixes
+
+* OS hard-coded ([df276e8](https://github.com/bucharest-gold/origin-s2i-nodejs/commit/df276e8))
+* trust node.js release team keys for centos ([b9f3e59](https://github.com/bucharest-gold/origin-s2i-nodejs/commit/b9f3e59))
+
+
+
 <a name="0.3.0"></a>
 # [0.3.0](https://github.com/bucharest-gold/origin-s2i-nodejs/compare/0.2.0...v0.3.0) (2017-04-04)
 
