@@ -88,8 +88,8 @@
     "lts": "Boron"
   },
   "7": {
-    "version": "v7.9.0",
-    "date": "2017-04-11",
+    "version": "v7.10.0",
+    "date": "2017-05-02",
     "files": [
       "aix-ppc64",
       "headers",

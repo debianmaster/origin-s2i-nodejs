@@ -19,7 +19,8 @@ if [[ ! " ${VERSIONS_ARRAY[@]} " =~ " ${VERSION} " || ! " ${OS_ARRAY[@]} " =~ " 
   echo "The valid OS are: ${VALID_OS}"
   echo "The Node.js versions are: ${VERSIONS}"
   echo "----------------------------------------"
-else
+fi  
+#else
 DOCKERFILE=${OS}"/Dockerfile."${OS}
 if [[ ! -z "${ONBUILD}" ]]; then
   BASE_IMAGE_NAME="${ONBUILD_IMAGE_NAME}"
@@ -86,4 +87,4 @@ for version in ${versions}; do
 
   # popd > /dev/null
 done
-fi
+# fi
