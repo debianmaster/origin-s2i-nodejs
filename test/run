@@ -38,7 +38,7 @@ run_onbuild_build() {
 }
 
 run_s2i_build() {
-  echo "Running s2i build ${s2i_args} ${test_dir} ${IMAGE_TAG} ${IMAGE_NAME}"
+  echo "Running s2i build ${s2i_args} file://${test_dir}/test-app ${IMAGE_TAG} ${IMAGE_NAME}-testapp"
   s2i build ${s2i_args} file://${test_dir}/test-app ${IMAGE_TAG} ${IMAGE_NAME}-testapp
 }
 

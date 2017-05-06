@@ -2,8 +2,8 @@
   "kind": "ImageStream",
   "apiVersion": "v1",
   "metadata": {
-    "name": "nodejs",
-    "creationTimestamp": "2017-05-03T14:13:16.112Z"
+    "name": "centos7-s2i-nodejs",
+    "creationTimestamp": "2017-05-06T23:30:55.894Z"
   },
   "spec": {
     "tags": [
@@ -18,7 +18,7 @@
         },
         "from": {
           "kind": "DockerImage",
-          "name": "bucharestgold/fedora-s2i-nodejs:4.8.3"
+          "name": "bucharestgold/centos7-s2i-nodejs:4.8.3"
         }
       },
       {
@@ -88,7 +88,7 @@
         },
         "from": {
           "kind": "DockerImage",
-          "name": "bucharestgold/fedora-s2i-nodejs:5.12.0"
+          "name": "bucharestgold/centos7-s2i-nodejs:5.12.0"
         }
       },
       {
@@ -130,7 +130,7 @@
         },
         "from": {
           "kind": "DockerImage",
-          "name": "bucharestgold/fedora-s2i-nodejs:6.10.3"
+          "name": "bucharestgold/centos7-s2i-nodejs:6.10.3"
         }
       },
       {
@@ -200,7 +200,7 @@
         },
         "from": {
           "kind": "DockerImage",
-          "name": "bucharestgold/fedora-s2i-nodejs:7.10.0"
+          "name": "bucharestgold/centos7-s2i-nodejs:7.10.0"
         }
       },
       {
