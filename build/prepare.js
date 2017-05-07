@@ -18,8 +18,8 @@ const releases = require('../releases.json');
 // if (validOSVersions.find(os => os === process.env.OS)) {
   fs.mkdir(`target`, (err) => {
     if (err && err.code !== 'EEXIST') return console.log(err);
-    processFiles(`${process.env.OS}/Dockerfile.${process.env.OS}`, releases);
-    processFiles(`${process.env.OS}/Dockerfile.${process.env.OS}.onbuild`, releases);
+    processFiles(`./Dockerfile.${process.env.OS}`, releases);
+    processFiles(`./Dockerfile.${process.env.OS}.onbuild`, releases);
   });
 // }
 
